@@ -1,6 +1,7 @@
 @media (max-width:500px){
-	.row {
-    --bs-gutter-x: 1.5rem !important;
+	
+	.container{
+		padding: 0px !important;
 	}
 	#page0{
 		display:none;
@@ -26,6 +27,19 @@
 		justify-content:space-between;
 		margin: auto !important;
 	}
+	.words{
+		font-size: 15px !important;
+	}
+	.head::after{
+		content: '';
+		position: absolute;
+		left: 0px;
+		right: 0;
+		bottom: 0px;
+		height: 1px;
+		width: 100%;
+		background: radial-gradient(ellipse at left,#ddd 0%,rgba(255,255,255,0) 70%);
+	}
 	.img-position{
 		position:absolute;
 		bottom:-20%;
@@ -34,9 +48,18 @@
 	.div1-bg{
 		height:100%!important;
 	}
+	.head,.div1-bg,.div2-bg,.div3-bg,.div4-bg,.div5-bg,.div6-bg{
+		border-radius: 0px !important;
+	}
 	.div2-bg,.div3-bg,.div4-bg,.div5-bg,.div6-bg{
 		margin: 42% 0% 0% 0%!important;
 		height:82vh!important;
+	}
+	.li-type{
+		padding: 18px 5px 0px 5px !important;
+	}
+	.moon-res{
+		text-align: end !important;
 	}
 	.res-padding-div3{
 		padding-top:15px;
@@ -181,22 +204,25 @@
 		z-index: 8;
 	}
 	.in{
-		transition: all .6s ease-in-out;
+		transition: all .4s ease;
 		animation-name: in;
 		animation-duration: 2s;
 		animation-fill-mode: both;
+		transform: translateX(0px);
+
 	}
 	@keyframes in{
 		0% {
 			opacity: 0;
-			-webkit-transform: translate3d(-70%,0,0) rotate3d(0,0,1,-120deg);
-			transform: translate3d(-70%,0,0) rotate3d(0,0,1,-120deg);
+			transform: translateX(-80%);
 		}
-
+		50% {
+			opacity: 1;
+			transform: translateX(05%);
+		}
 		100% {
 			opacity: 1;
-			-webkit-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
+			transform: translateX(0%);
 		}
 	}
 }
@@ -239,22 +265,25 @@
 		z-index: 8;
 	}
 	.in{
-		transition: all .6s ease;
+		transition: all .4s ease;
 		animation-name: in;
 		animation-duration: 2s;
 		animation-fill-mode: both;
+		transform: translateX(0px);
+
 	}
 	@keyframes in{
 		0% {
 			opacity: 0;
-			-webkit-transform: translate3d(-70%,0,0) rotate3d(0,0,1,-120deg);
-			transform: translate3d(-70%,0,0) rotate3d(0,0,1,-120deg);
+			transform: translateX(-80%);
 		}
-
+		50% {
+			opacity: 1;
+			transform: translateX(05%);
+		}
 		100% {
 			opacity: 1;
-			-webkit-transform: translate3d(0,0,0);
-			transform: translate3d(0,0,0);
+			transform: translateX(0%);
 		}
 	}
 }

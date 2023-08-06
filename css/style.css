@@ -6,6 +6,14 @@
 h2,h3,h4,h5,h6,a{
 	font-family: 'Josefin Sans', sans-serif;
 }
+row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-top: var(--bs-gutter-y);
+}
 p{
 	margin-top: 0;
     margin-bottom: 0!important;
@@ -56,13 +64,13 @@ li i:hover{
 }
 .welcome{
 	text-align: center;
-	font-size:30px;
-	font-weight:700;
+	font-size:40px;
+	font-weight:900;
 	background-clip:text;
 	-webkit-background-clip:text;
 	color:transparent;
 	background-image:url('../image/animi.jpg');
-	animation:animate-0 15s ease-in-out 1s infinite;
+	animation:animate-0 8s ease-in-out 1s infinite;
 }
 @keyframes animate-0{
 	0%{
